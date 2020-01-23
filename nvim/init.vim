@@ -2,14 +2,36 @@ call plug#begin()
 Plug 'neovim/nvim-lsp'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete-lsp'
+
+Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
+
 Plug 'ervandew/supertab'
-Plug 'Chiel92/vim-autoformat'
-Plug 'cespare/vim-toml'
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+
+Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+Plug 'plasticboy/vim-markdown'
+Plug 'dag/vim-fish'
 call plug#end()
+
+set nocompatible
+syntax on
+filetype plugin on
+
+" setup colorscheme
+set background=dark
+colorscheme onedark
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ }
 
 " Nerdtree
 let g:NERDTreeShowHidden = 1
@@ -39,11 +61,7 @@ call deoplete#custom#source('_', 'max_menu_width', 80)
 " Press Tab to scroll _down_ a list of auto-completions
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
-" rustfmt on write using autoformat
-autocmd BufWrite * :Autoformat
-
-"TODO: clippy on write
-autocmd BufWrite * :Autoformat
+let g:rustfmt_autosave = 1
 
 nnoremap <leader>c :!cargo clippy
 
