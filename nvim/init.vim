@@ -1,5 +1,5 @@
 call plug#begin()
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'neovim/nvim-lsp'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
