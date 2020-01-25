@@ -1,4 +1,6 @@
 call plug#begin()
+Plugin 'christoomey/vim-tmux-navigator'
+
 Plug 'neovim/nvim-lsp'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete-lsp'
@@ -39,7 +41,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
 " Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
 nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 
