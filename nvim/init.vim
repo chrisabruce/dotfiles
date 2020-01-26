@@ -8,6 +8,9 @@ Plug 'Shougo/deoplete-lsp'
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 
+Plug 'machakann/vim-highlightedyank'
+Plug 'andymass/vim-matchup'
+
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 
