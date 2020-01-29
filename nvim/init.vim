@@ -25,6 +25,7 @@ Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'plasticboy/vim-markdown'
 Plug 'dag/vim-fish'
+Plug 'lifepillar/pgsql.vim'
 call plug#end()
 
 set nocompatible
