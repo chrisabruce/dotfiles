@@ -1,0 +1,42 @@
+
+# 2022-07-31 18:26:19.859787
++\q
+
+# 2022-07-31 18:26:34.724728
++\dt
+
+# 2022-07-31 18:26:38.211383
++\q
+
+# 2022-08-08 21:07:39.849960
++select * from users;
+
+# 2022-08-08 21:07:52.095475
++select hashword from users;
+
+# 2022-08-08 21:08:18.016644
++select * from users where email like 'chris%';
+
+# 2022-08-08 21:20:54.049363
++\q
+
+# 2022-08-19 11:31:43.720321
++\dt validators
+
+# 2022-08-19 11:31:50.915367
++\d validators
+
+# 2022-08-19 11:32:56.256170
++select * from users where email like '%helium%';
+
+# 2022-08-19 11:34:09.491706
++select address from validators where user_id = '99693d25-8710-4d37-986b-7d4f967b1228';
+
+# 2022-08-19 11:34:29.836506
++select count(*) from validators where user_id = '99693d25-8710-4d37-986b-7d4f967b1228';
+
+# 2022-08-19 11:36:04.776856
++\copy (select address from validators where user_id = '99693d25-8710-4d37-986b-7d4f967b1228') to 'nova-vals-on-blockjoy.csv' with delimiter ',' CSV HEADER;
+
+# 2022-08-19 11:36:07.549873
++\q
